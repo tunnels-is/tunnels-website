@@ -1,0 +1,12 @@
+.editable-td {
+    padding: 0 !important;
+
+    .editable-cell {
+        background: transparent;
+        width: 100%;
+        color: white;
+        border: none;
+        padding: 10px 8px;
+        cursor: pointer;
+    }
+}
