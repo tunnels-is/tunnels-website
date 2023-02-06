@@ -1,8 +1,12 @@
 html {
     height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 body {
+    overflow: hidden;
+    overflow-y: scroll;
     height: 100%;
     font-family: system-ui !important;
     -ms-overflow-style: none;
@@ -180,14 +184,27 @@ body::-webkit-scrollbar {
     .title {
         height: 100px;
         width: 100%;
-        text-align: center;
+        // text-align: center;
         color: #fff;
-        font-size: 10em;
-        position: absolute;
-        top: 15%;
+        font-size: 2em;
+        position: fixed;
+        top: 0px;
+        left: 10px;
         text-shadow: 5px 4px 13px #000000;
         font-weight: bold;
     }
+
+    @include min768px {
+        // top: 10%;
+        font-size: 2em !important;
+    }
+
+    @include min1260px {
+        // top: 12%;
+        font-size: 2em !important;
+    }
+
+
 
     .sub-title {
         display: none;
@@ -313,8 +330,13 @@ body::-webkit-scrollbar {
     .about {
 
         .about-text {
-            margin-top: 140px;
+            margin-top: 20px;
         }
+
+        .just-cent {
+            justify-content: center;
+        }
+
 
         .about-button-col {
             margin-top: 5px !important;
@@ -331,8 +353,6 @@ body::-webkit-scrollbar {
                 height: 40px;
                 width: 320;
                 font-weight: bold;
-                font-size: 1.4em;
-                margin-bottom: 14px;
 
             }
 
@@ -347,7 +367,10 @@ body::-webkit-scrollbar {
         .about-text {
             margin-top: 0px;
             padding-right: 20px;
+            max-width: 100%;
         }
+
+
 
         .nl-wrapper {
             position: relative;
@@ -373,6 +396,7 @@ body::-webkit-scrollbar {
             // justify-content: center;
             display: flex;
             margin-left: -2px !important;
+            width: 100% !important;
 
             .all-about-button {
                 background: none !important;
@@ -383,7 +407,9 @@ body::-webkit-scrollbar {
                 height: 40px;
                 width: 320;
                 font-weight: bold;
-                font-size: 1.1em;
+                font-size: 2em;
+                margin-bottom: 24px;
+                padding-right: 0px !important;
             }
 
             .all-about-button:hover {
@@ -392,6 +418,59 @@ body::-webkit-scrollbar {
         }
     }
 }
+
+@media only screen and (min-width: 1200px) {
+    .home {
+
+        .product {
+
+            .about-text {
+                max-width: 330px !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .home {
+
+        .about {
+            .about-text {
+                max-width: 750px !important;
+            }
+        }
+
+        .product {
+            margin-top: 50px !important;
+
+            .about-text {
+                max-width: 750px !important;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .banner {
+        .title {
+            font-size: 3em;
+        }
+
+        .large-banner {
+            margin-top: 0px;
+        }
+    }
+
+    .home {
+        .about {
+            .about-text {
+                // margin-top: 100px;
+            }
+        }
+    }
+}
+
 
 
 
@@ -406,7 +485,7 @@ body::-webkit-scrollbar {
 }
 
 .section-image {
-    width: 100%;
+    // width: 100%;
 }
 
 .row-spacing {
