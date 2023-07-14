@@ -1,9 +1,8 @@
 #!/bin/bash
-cd ./gui
 rm -r dist
 rm -r .parcel-cache
 
-reset && npx parcel serve -p 1233 --no-cache --no-source-maps src/Portal.html
+reset && npx parcel serve -p 1233 --no-cache --no-source-maps src/index.html
 
-cd ..
-
+# windowas
+# parcel.cmd -p 1223 --no-cache --no-source-maps .\src\index.html
